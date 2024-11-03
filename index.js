@@ -6,10 +6,6 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 // Load rules from the JSON file
 const rules = JSON.parse(fs.readFileSync('rules.json', 'utf8'));
 
-client.once('ready', () => {
-    console.log('Bot is ready!');
-});
-
 client.on('interactionCreate', async interaction => {
     if (!interaction.isCommand()) return;
 
@@ -66,6 +62,7 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.on('ready', async () => {
+    console.log('Bot is ready!');
     const commands = [
         new SlashCommandBuilder()
             .setName('rule')
