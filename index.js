@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const fs = require('fs');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
-// Cargar las reglas desde el archivo JSON
+// Load rules from the JSON file
 const rules = JSON.parse(fs.readFileSync('rules.json', 'utf8'));
 
 client.once('ready', () => {
@@ -25,23 +25,23 @@ client.on('interactionCreate', async interaction => {
             const rule = rules[section][ruleNumber];
 
             if (typeof rule === 'string') {
-                // Regla sin subíndices
+                // Rule without subindices
                 response += rule;
                 await interaction.reply({ content: response, ephemeral: false });
             } else {
-                // Regla con subíndices
+                // Rule with subindices
                 response += rule.main;
                 if (subIndex) {
-                    // Mostrar subíndice específico si existe
+                    // Display specific subindex if it exists
                     if (rule.sub[subIndex]) {
                         response += `\n  ${subIndex}. ${rule.sub[subIndex]}`;
                         await interaction.reply({ content: response, ephemeral: false });
                     } else {
-                        // Subíndice no encontrado, mostrar solo al usuario
+                        // Subindex not found, display to user only
                         await interaction.reply({ content: "Sorry, I couldn't find that subindex.", ephemeral: true });
                     }
                 } else {
-                    // Mostrar todos los subíndices
+                    // Display all subindices
                     for (const [key, subRule] of Object.entries(rule.sub)) {
                         response += `\n  ${key}. ${subRule}`;
                     }
@@ -59,7 +59,7 @@ client.on('interactionCreate', async interaction => {
             let response = rules.appeals[appealType].replace('@PLAYER', `<@${player.id}>`);
             await interaction.reply({ content: response, ephemeral: false });
         } else {
-            // Tipo de apelación no encontrado, mostrar solo al usuario
+            // Appeal type not found, display to user only
             await interaction.reply({ content: "Sorry, I couldn't find that appeal template.", ephemeral: true });
         }
     }
@@ -97,10 +97,10 @@ client.on('ready', async () => {
             .toJSON()
     ];
 
-    const guildId = '1079157452894896188';
+    const guildId = 'YOUR_GUILD_ID';
     const guild = client.guilds.cache.get(guildId);
     await guild.commands.set(commands);
     console.log('Slash commands registered');
 });
 
-client.login('MTMwMjE3Nzg3MDAyOTc4MzEzNw.GHoaru.4_DAtA0EAX0slM7i02mDCAtHT1z_aUBW18U24I'); 
+client.login('YOUR_BOT_TOKEN');
