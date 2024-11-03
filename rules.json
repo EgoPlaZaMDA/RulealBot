@@ -1,0 +1,83 @@
+{
+  "A": {
+    "1": "Be nice and respectful towards everyone. Excessive swearing, rudeness, and harassment is not tolerated.",
+    "2": "Do not spam or advertise.",
+    "3": "Observers should never give tactical information to players or intentionally disrupt game play.",
+    "4": "Follow any directions given by an Overcast Community staff member. If you believe a staff member has directed you wrongly, please email brott@oc.tc."
+  },
+  "B": {
+    "1": "Players may not abuse glitches, like placing blocks in areas restricted by the plugin to walk on, also known as 'block glitching'.",
+    "2": "Maps may have rules that apply only to that specific map. They can be read under /map.",
+    "3": {
+      "main": "Players may only press one button, and have it register as one click. Any behaviour that results in double clicks is prohibited.",
+      "sub": {
+        "a": "Jitter clicking is explicitly permitted.",
+        "b": "Butterfly clicking is discouraged as it is more likely to produce double clicks. Do so at your own risk.",
+        "c": "Drag clicking is explicitly prohibited, as it generates more than one click with a single movement.",
+        "d": "If your mouse's debounce timer is configurable, it must be set to a minimum of 10 ms."
+      }
+    },
+    "4": "Users may not knowingly degrade network resources, which includes unreasonable redstone clocking and excessive TNT explosions, among others.",
+    "5": "Users may not collect in-game data through automated means such as bot accounts, unless expressly approved."
+  },
+  "C": {
+    "1": "Any client mods or external tools that give you an unfair advantage over vanilla Minecraft users are illegal while playing.",
+    "2": {
+      "main": "The following mods are explicitly permitted:",
+      "sub": {
+        "a": "Optifine",
+        "b": "CaffeineMC",
+        "c": "ArmorStatusHUD / StatusEffectHUD",
+        "d": "LabyMod & 5zig",
+        "e": "Toggle Sneak / Sprint",
+        "f": "VoxelMap, or other Minimaps without radar and cave mapping",
+        "g": "Lunar Client",
+        "h": "Badlion Client",
+        "i": "Cosmic Client",
+        "j": "PvPLounge Client"
+      }
+    },
+    "3": {
+      "main": "The following mods are explicitly prohibited:",
+      "sub": {
+        "a": "Inventory Sorters",
+        "b": "Mods that expose or enlarge the name-tags of players",
+        "c": "Automatic tool selectors",
+        "d": "Minimaps that show entity positions, or show caves/underground.",
+        "e": "X-rays",
+        "f": "Auto-hitters/Autoclickers",
+        "g": "Aimbots",
+        "h": "Fly mods",
+        "i": "Damage/Health Indicator",
+        "j": "SmartMoving"
+      }
+    },
+    "4": "For any other mods, email brott@oc.tc for confirmation before using it."
+  },
+  "D": {
+    "1": "Team griefing is prohibited, and is defined as any action that directly harms your own team.",
+    "2": {
+      "main":  "Common indicators of team griefing:",
+      "sub": {
+        "a": "Placing and/or setting off TNT in your base (for non-defensive purposes)",
+        "b": "Destroying your own team's chests or workbenches",
+        "c": "Teamkilling by spleefing or blowing them up with TNT",
+        "d": "Aiding or working together with a member of the other team."
+      }
+    }
+  },
+  "E": {
+    "1": "Players may be kicked for breaking the rules. If the rule violation is severe, you may be banned instead.",
+    "2": "Players may be muted for breaking chat rules. If you have been muted before, the mute length may be longer.",
+    "3": "Evading a punishment by connecting with another account is not allowed, and may result in all your accounts and IP address being banned.",
+    "4": "Bans may be appealed by visiting the appeal page."        
+  },
+  "appeals": {
+    "bfly": "Hey @PLAYER, thanks for admitting. According to our rules (https://oc.tc/rules/) butterfly clicking is highly discouraged as it can lead to double clicking, providing an advantage over other players. As per our rules you must raise your debounce timer to 10ms to prevent this if your mouse is capable of doing so. I’ll go ahead and reduce your ban to a temporary 30-day ban. I would advise you re-read our rules because if you get banned for anything clicking-related again, your chance of appeal will be very slim.",
+    "drag": "Hey @PLAYER, thanks for admitting. Drag clicking is explicitly prohibited on our servers as any movement that results in double clicking is prohibited. Since you admitted and you will follow the rules I will give you a second chance and I will reduce your ban to a temporary 60-day ban. Remember that evading the ban with another account is prohibited and will result in all your accounts being banned. Please read our rules before rejoining the server. (https://oc.tc/rules/)",
+    "BoD": "Hey @PLAYER. After reviewing the logs and re-reading the conversation, it appears there isn't enough evidence to uphold this ban, so I'll unban you now. This is not to say that I don't think you weren't using cheats, just that there isn't enough evidence to uphold this ban. Please read our rules before rejoining the server. (https://oc.tc/rules/)",
+    "skin": "Hey @PLAYER, thanks for changing your skin. I will go ahead and unban you now. Please remember to follow our rules to avoid any issues in the future. (https://oc.tc/rules/)",
+    "AC": "Hey @PLAYER thanks for admitting to hacking. Because you promised to stop autoclicking I'll reduce your ban to a temporary 90-day ban. Here are our rules (https://oc.tc/rules/), please read them before you're unbanned so you can be familiar with what will get you banned and what won't, as if you're caught hacking again you will be banned without chance of appeal for a while."
+  }
+}
+  
