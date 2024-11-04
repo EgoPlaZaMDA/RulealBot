@@ -24,7 +24,7 @@ const commands = [
         .setDescription('Send an appeal template')
         .addStringOption(option =>
             option.setName('type')
-                .setDescription('Type of appeal (bfly, drag, BoD, skin, AC)')
+                .setDescription('Type of appeal (bfly, drag, AC, skin, BoD)')
                 .setRequired(true))
         .addUserOption(option =>
             option.setName('player')
