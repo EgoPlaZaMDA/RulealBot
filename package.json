@@ -1,0 +1,16 @@
+{
+  "name": "rulealbot",
+  "version": "1.0.0",
+  "description": "A Discord bot designed to manage server rules and player appeal templates with ease. This bot allows users to retrieve specific server rules and automatically generates response templates for different types of appeals. It's a useful tool for community managers and moderators looking to streamline the management of rule enforcement and player ban appeals.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5"
+  }
+}
