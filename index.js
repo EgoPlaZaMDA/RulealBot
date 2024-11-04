@@ -1,14 +1,10 @@
 const { Client, GatewayIntentBits } = require('discord.js');
-const { SlashCommandBuilder } = require('@discordjs/builders');
 const fs = require('fs');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
+require('dotenv').config()
 
 // Load rules from the JSON file
 const rules = JSON.parse(fs.readFileSync('rules.json', 'utf8'));
-
-client.once('ready', () => {
-    console.log('Bot is ready!');
-});
 
 client.on('interactionCreate', async interaction => {
     if (!interaction.isCommand()) return;
@@ -65,42 +61,5 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
-client.on('ready', async () => {
-    const commands = [
-        new SlashCommandBuilder()
-            .setName('rule')
-            .setDescription('Get a specific rule')
-            .addStringOption(option => 
-                option.setName('section')
-                    .setDescription('Section of the rule (A, B, C, D, E)')
-                    .setRequired(true))
-            .addStringOption(option => 
-                option.setName('number')
-                    .setDescription('Rule number')
-                    .setRequired(true))
-            .addStringOption(option => 
-                option.setName('subindex')
-                    .setDescription('Subindex of the rule (optional)')
-                    .setRequired(false))  
-            .toJSON(),
-        new SlashCommandBuilder()
-            .setName('appeal')
-            .setDescription('Send an appeal template')
-            .addStringOption(option =>
-                option.setName('type')
-                    .setDescription('Type of appeal (bfly, drag, BoD, skin, AC)')
-                    .setRequired(true))
-            .addUserOption(option =>
-                option.setName('player')
-                    .setDescription('Mention the player')
-                    .setRequired(true))
-            .toJSON()
-    ];
+client.login(process.env.DISCORD_BOT_TOKEN);
 
-    const guildId = 'YOUR_GUILD_ID';
-    const guild = client.guilds.cache.get(guildId);
-    await guild.commands.set(commands);
-    console.log('Slash commands registered');
-});
-
-client.login('YOUR_BOT_TOKEN');
