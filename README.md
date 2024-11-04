@@ -38,6 +38,8 @@ For example:
 - For the `rule` command, the bot will respond with the main rule text and any specified subindex, or all subindices if no specific one is given.
 - For the `appeal` command, the bot will pull the appropriate template, replace the `@PLAYER` placeholder with the specified player mention, and send the message.
 
+The rules were sourced from [https://oc.tc/rules](https://oc.tc/rules) and the appeals templates from [https://oc.tc/appeal](https://oc.tc/appeal), and the content is tailored for this server 
+
 ## Usage
 
 Invite the bot to your Discord server and use the /rule and /appeal commands. The bot will respond based on the rules and appeal templates configured in the JSON file.
