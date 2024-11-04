@@ -6,10 +6,6 @@ require('dotenv').config()
 // Load rules from the JSON file
 const rules = JSON.parse(fs.readFileSync('rules.json', 'utf8'));
 
-client.once('ready', () => {
-    console.log('Bot is ready!');
-});
-
 client.on('interactionCreate', async interaction => {
     if (!interaction.isCommand()) return;
 
@@ -66,3 +62,4 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.login(process.env.DISCORD_BOT_TOKEN);
+
